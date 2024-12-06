@@ -1,10 +1,17 @@
-// Handle Create New Character button
+// Elements
+const createCharacterBtn = document.getElementById('createCharacterBtn');
+const characterForm = document.getElementById('characterForm');
+const menu = document.getElementById('menu');
+const cancelFormBtn = document.getElementById('cancelFormBtn');
+const addMulticlassBtn = document.getElementById('addMulticlassBtn');
+const classFields = document.getElementById('classFields');
+const newCharacterForm = document.getElementById('newCharacterForm');
+
+
 document.getElementById('createCharacterBtn').addEventListener('click', () => {
-    alert("Redirecting to create new character form!");
-    // Add logic to navigate or display the character creation form
+    window.location.href = 'create-character.html'; // Replace with the correct path to your character creation page
 });
 
-// Handle Upload Character JSON file
 document.getElementById('uploadCharacter').addEventListener('change', (event) => {
     const file = event.target.files[0];
 
@@ -23,13 +30,3 @@ document.getElementById('uploadCharacter').addEventListener('change', (event) =>
         alert("Please upload a valid JSON file!");
     }
 });
-
-// Display Character Data
-function displayCharacterData(data) {
-    const output = document.getElementById('output');
-    output.style.display = 'block';
-    output.innerHTML = `
-        <h2>Character Data:</h2>
-        <pre>${JSON.stringify(data, null, 2)}</pre>
-    `;
-}

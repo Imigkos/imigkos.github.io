@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Character</h1>
+        <form id="newCharacterForm">
+            <div class="form-group">
+                <label for="characterName">Character Name:</label>
+                <input type="text" id="characterName" placeholder="Enter character name" required>
+            </div>
+        
+            <div class="flex-row">
+                <div class="form-group">
+                    <label for="characterLevel">Level:</label>
+                    <input type="number" id="characterLevel" name="characterLevel" min="1" max="20" value="1" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="characterClass">Class:</label>
+                    <input type="text" id="characterClass" placeholder="Enter class" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="characterSubclass">Subclass:</label>
+                    <input type="text" id="characterSubclass" placeholder="Enter subclass" required>
+                </div>
+            </div>
+            <div id="classFields"></div>
+            <button type="button" id="addMulticlassBtn">Add Multiclass</button>
+            <button type="submit">Save Character</button>
+            
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="create-character.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #6a6a6d;
     color: #333;
 }
 
@@ -10,7 +10,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     text-align: center;
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -21,13 +21,21 @@ h1 {
     margin-bottom: 20px;
 }
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
 }
 
-button, .upload-btn {
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button, .btn {
     padding: 15px 20px;
     font-size: 16px;
     border: none;
@@ -35,16 +43,17 @@ button, .upload-btn {
     background: #0078D7;
     color: white;
     cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease;
-    text-align: center;
 }
 
-button:hover, .upload-btn:hover {
+button:hover, .btn:hover {
     background: #005bb5;
 }
 
-#uploadCharacter {
-    display: none;
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
 }
 
 #output {
@@ -55,4 +64,81 @@ button:hover, .upload-btn:hover {
     background: #f9f9f9;
     display: none;
     text-align: left;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #0078D7;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: normal;
+}
+
+.upload-btn:hover {
+    background: #005bb5;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+    gap: 5px; /* Add space between the buttons */
+}
+
+.flex-row {
+    display: flex;
+    gap: 20px; /* Adds space between fields */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+    justify-content: space-between; /* Aligns items with space between */
+}
+
+.form-group {
+    flex: 1; /* Allows fields to share available space */
+    min-width: 150px; /* Ensures a minimum width for each field */
+    margin-bottom: 15px; /* Adds spacing below each field */
+}
+
+.form-group input {
+    width: 80%; /* Ensures inputs fill their container */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.class-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Space between class and subclass inputs */
+}
+
+/* Add this for styling the remove button */
+.removeMulticlassBtn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Space between the inputs and the button */
+}
+
+.removeMulticlassBtn:hover {
+    background-color: #c9302c;
+}
+
+/* Optional: To ensure class and subclass fields don't shrink too much */
+.multiclass-entry {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between; /* Space out inputs and button */
 }
