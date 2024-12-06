@@ -29,6 +29,7 @@ document.getElementById('addMulticlassBtn').addEventListener('click', () => {
     multiclassGroup.querySelector('.removeMulticlassBtn').addEventListener('click', () => {
         classFields.removeChild(multiclassGroup);  // Removes the entire multiclass entry
 });
+});
 
 newCharacterForm.addEventListener('submit', (event) => {
     event.preventDefault();
