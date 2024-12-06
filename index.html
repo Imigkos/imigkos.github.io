@@ -1,1 +1,21 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Character Management</h1>
+        <div class="button-group">
+            <button id="createCharacterBtn">Create New Character</button>
+            <label for="uploadCharacter" class="upload-btn">Upload Existing Character</label>
+            <input type="file" id="uploadCharacter" accept=".json" hidden>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
